@@ -1,0 +1,31 @@
+<div fxLayout="row" fxLayoutAlign="end center" >
+
+  <ng-container *ngIf="signedin$ | async">
+    <button mat-button class="menu-button" routerLink="/profile">
+      <mat-icon>account_circle</mat-icon>
+      <span class="menu-button-text">Profile</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/signout">
+      <mat-icon>logout</mat-icon>
+      <span class="menu-button-text">Signout</span>
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="!(signedin$ | async)">
+    <button mat-button class="menu-button" routerLink="/signin">
+      <mat-icon>login</mat-icon>
+      <span class="menu-button-text">Signin</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/signup">
+      <mat-icon>person_add</mat-icon>
+      <span class="menu-button-text">Signup</span>
+    </button>
+  </ng-container>
+
+  <button mat-button class="menu-button" (click)="themeSwitcher()">
+    <mat-icon>format_color_fill</mat-icon>
+    <span class="menu-button-text">Colors</span>
+  </button>
+
+</div>
