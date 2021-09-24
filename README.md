@@ -65,8 +65,8 @@ sudo npm install -g @angular/cli
 ### Install
 
 ```bash
-git clone https://stevaidis.mywire.org:4080/ste/angular-django-starter-front.git
-cd angular-django-starter-front
+git https://github.com/vaidis/angular-django-starter.git
+cd angular-django-starter
 npm i
 ```
 
