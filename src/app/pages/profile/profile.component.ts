@@ -17,7 +17,6 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("profile -------------------")
     this.authService.checkAuth().subscribe(() => {});
   }
 
